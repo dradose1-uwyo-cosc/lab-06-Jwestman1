@@ -1,12 +1,9 @@
-# Your Name Here
+# Jordan Westman
 # UWYO COSC 1010
-# Submission Date
+# 10/17/24
 # Lab 06
-# Lab Section: 
-# Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# Lab Section: 18
+# I keep getting counted absent for labs. If you are reading this, please check with Austin before counting me as absent!
 
 
 random_string = """
@@ -70,6 +67,28 @@ print(len(random_string)) # Print out the size for reference
 # Output which letter occurred the most 
 # Output which letter occurred the least 
 # Output what the percentage of the string each character is, again in alphabetical
+letter_count= {}
+for i in random_string:
+    if i in letter_count.keys():
+        letter_count[i] +=1
+    else:
+        letter_count[i] = 1
+    sortlc= sorted(letter_count.items())
+    
+max= "a"
+min= "a"
+print(sortlc)
+for i in letter_count.keys():
+    if letter_count[i]>letter_count[max]:
+    max = i
+    print(max)
+    if letter_count[i]<letter_count[min]:
+    min = i
+    print(min)
+
+    
+
+    
 
 #Tips and trick:
 # You can iterate through strings like you would a list
